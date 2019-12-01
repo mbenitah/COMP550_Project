@@ -72,16 +72,20 @@ if use_cuda:
 
 # Predict all tokens
 
-with torch.no_grad():
-    outputs = model(tokens_tensor) #, masked_lm_labels=tokens_tensor)
-    #outputs = model(tokens_tensor)
-    predictions = outputs
-    loss, prediction_scores = outputs[:2]
+#tokens_tensor = torch.tensor(tokenizer.encode("Hello, my dog is cute", add_special_tokens=True)).unsqueeze(0)  # Batch size 1
+masks =  torch.tensor([  -1,  -1,  -1,  -1,  -1,  -1, -1,   -1,   -1,   -1,   -1,   -1,   -1,   -1])
+masks[masked_index] = 0
 
+with torch.no_grad():
+    outputs = model(tokens_tensor, masked_lm_labels=masks)
+    #outputs = model(tokens_tensor)
+    predictions = outputs[1]
+    loss, prediction_scores = outputs[:2]
 #tokens_tensor = torch.tensor(tokenizer.encode("Hello, my dog is cute", add_special_tokens=True)).unsqueeze(0)  # Batch size 1
 
 print('loss: ', loss.item() )
-print('prediction_scores: ', prediction_scores)
+#print('prediction_scores: ', prediction_scores)
+
 
 predicted_index = torch.argmax(predictions[0, masked_index]).item()
 predicted_token = tokenizer.convert_ids_to_tokens([predicted_index])[0]
