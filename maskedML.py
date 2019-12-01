@@ -95,7 +95,7 @@ masks =  torch.tensor(-1*torch.ones((tokens_tensor.shape[1]))).long()
 masks[masked_index] = 0
 
 print(masks)
-
+ 
 with torch.no_grad():
     outputs = model(tokens_tensor, masked_lm_labels=masks)
     #outputs = model(tokens_tensor)
