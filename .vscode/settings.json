@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/Users/myriamlaiymani/anaconda/envs/nlp/bin/python"
+    "python.pythonPath": "/Users/michaelbenitah/anaconda3/envs/nlp/bin/python",
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false
 }

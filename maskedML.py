@@ -1,10 +1,10 @@
 import torch
-from transformers import BertTokenizer, BertModel, BertForMaskedLM
+from transformers.transformers import BertTokenizer, BertModel, BertForMaskedLM
 from random import randrange
 
 # OPTIONAL: if you want to have more information on what's happening under the hood, activate the logger as follows
 import logging
-logging.basicConfig(level=logging.INFO)
+#logging.basicConfig(level=logging.INFO)
 
 
 
@@ -91,7 +91,7 @@ if use_cuda:
 # Predict all tokens
 
 #tokens_tensor = torch.tensor(tokenizer.encode("Hello, my dog is cute", add_special_tokens=True)).unsqueeze(0)  # Batch size 1
-masks =  torch.tensor(-1*torch.ones((tokens_tensor.shape[1]))).long()
+masks =  torch.tensor(-1 * torch.ones((tokens_tensor.shape[1]))).long()
 masks[masked_index] = 0
 
 print(masks)
