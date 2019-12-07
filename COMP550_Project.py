@@ -72,8 +72,8 @@ def main():
     args = get_arguments()
 
     txt = read(args.text_file)
-    _, masked, ids = masking.mask(txt, args.percent_words)
-    masking.predict(ids, masked)
+    tokenized_text, masked, ids = masking.mask(txt, args.percent_words)
+    masking.predict(tokenized_text, masked)
 
 
 if __name__ == '__main__':

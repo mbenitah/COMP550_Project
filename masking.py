@@ -56,16 +56,17 @@ def mask(text, percentage):
     return tokenized_text, masked, ids
 
 
-def predict(ids, masked=None):
+def predict(tokenized_text, masked=None):
     '''Predicts masked words in a tokenized text.
     Input:
-    ids:        ids of encoded text
-    masked:     dictionary of indexes and words that have been replaced
-                with [MASK]
+    tokenized_text:     list of tokens of the original text
+                        with some words replaced to [MASK]
+    masked:             dictionary of indexes and words that have been replaced
+                        with [MASK] (for calculating accuracy)
     '''
 
-    # segments_ids = [0] * len(tokenized_text)
-    # segments_ids = [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1]
+    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    ids = tokenizer.convert_tokens_to_ids(tokenized_text)
 
     # Convert inputs to PyTorch tensors
     ids_tensor = torch.tensor([ids])
@@ -74,7 +75,7 @@ def predict(ids, masked=None):
     # Load pre-trained model (weights)
     model = BertForMaskedLM.from_pretrained('bert-base-uncased')
     # model.config_class(os.path.join(SAVE_DIRECTORY, CONFIG_FILE))
-    model.config_class(max_position_embeddings=1024)
+    # model.config_class(max_position_embeddings=1024)
     model.eval()
 
 
@@ -92,10 +93,7 @@ def predict(ids, masked=None):
 
     with torch.no_grad():
         outputs = model(ids_tensor, masked_lm_labels=masks)
-        #outputs = model(tokens_tensor)
-        #predictions = outputs[1]
         loss, predictions = outputs[:2]
-    # tokens_tensor = torch.tensor(tokenizer.encode("Hello, my dog is cute", add_special_tokens=True)).unsqueeze(0)  # Batch size 1
 
     print('loss: ', loss.item())
     print('prediction_scores: ', predictions.shape)
@@ -103,7 +101,6 @@ def predict(ids, masked=None):
     words = {}
     scores = {}
 
-    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     acc = 0
     for index in masked:
         predicted_index = torch.argmax(predictions[0, index]).item()
@@ -151,8 +148,8 @@ def predict(ids, masked=None):
 
 
 def main():
-    _, masked, ids = mask("I went to the opera yesterday. It was a great experience. The singer was crashed by the chandelier. She sang a high note.", 0.2)
-    predict(ids, masked)
+    tokenized_text, masked, ids = mask("I went to the opera yesterday. It was a great experience. The singer was crashed by the chandelier. She sang a high note.", 0.2)
+    predict(tokenized_text, masked)
 
 if __name__ == '__main__':
     main()
