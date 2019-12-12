@@ -1,0 +1,8 @@
+BACKGROUND	Glucose and insulin levels are associated with left ventricular mass ( LVM ) in insulin-resistant individuals .
+BACKGROUND	Antihypertensive drugs have different effects on glucose and insulin metabolism ( GIM ) and on LVM .
+BACKGROUND	To evaluate whether the effects of antihypertensive therapy on LVM are associated with its effects on GIM , we compared the effects of atenolol and perindopril on these parameters in a group of insulin-resistant , obese hypertensives .
+RESULTS	A total of @ obese , nondiabetic hypertensives who were aged @ + / -@ years , had a body mass index of @ + / -@ kg/m ( @ ) , were free of coronary or valvular heart disease , and had normal LV function were randomized to treatment with atenolol ( n = @ ) or perindopril ( n = @ ) .
+RESULTS	Echocardiographic LVM corrected for height ( LVM/height ) and GIM ( @-hour intravenous glucose tolerance test ) were measured after @ to @ weeks of washout and @ months of treatment .
+RESULTS	Baseline characteristics were similar in both groups .
+RESULTS	Atenolol and perindopril effectively reduced blood pressure ( from @ + / -@ / @ + / -@ to @ + / -@ / @ + / -@ mm Hg and from @ + / -@ / @ + / -@ to @ + / -@ / @ + / -@ mm Hg , respectively , for the atenolol and perindopril groups ; P : = @ ) .
+RESULTS	Atenolol significantly worsened GIM parameters , fasting glucose levels ( @ + / -@ to @ + / -@ mmol/L ; P : = @ ) , fasting insulin levels ( @ + / -@ to @ + / -@ pmol/L ; P : = @ ) , and most other relevant metabolic measures ( P : < @ for all ) .

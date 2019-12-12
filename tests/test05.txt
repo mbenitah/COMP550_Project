@@ -1,0 +1,11 @@
+OBJECTIVE	The goal of the study was to assess semantic priming to emotion and nonemotion cue words using a novel measure of associational breadth for participants who either took rapid eye movement ( REM ) or nonrapid eye movement ( NREM ) naps or who remained awake ; assess relation of priming to REM sleep consolidation and REM sleep inertia effects .
+METHODS	The associational breadth task was applied in both a priming condition , where cue-words were signaled to be memorized prior to sleep ( primed ) , and a nonpriming condition , where cue words were not memorized ( nonprimed ) .
+METHODS	Cue words were either emotional ( positive , negative ) or nonemotional .
+METHODS	Participants were randomly assigned to either an awake ( WAKE ) or a sleep condition , which was subsequently split into NREM or REM groups depending on stage at awakening .
+METHODS	Hospital-based sleep laboratory .
+METHODS	Fifty-eight healthy participants ( @ male ) ages @ to @ y ( Mage = @ @ y ) .
+RESULTS	The REM group scored higher than the NREM or WAKE groups on primed , but not nonprimed emotional cue words ; the effect was stronger for positive than for negative cue words .
+RESULTS	However , REM time and percent correlated negatively with degree of emotional priming .
+RESULTS	Priming occurred for REM awakenings but not for NREM awakenings , even when the latter sleep episodes contained some REM sleep .
+CONCLUSIONS	Associational breadth may be selectively consolidated during REM sleep for stimuli that have been tagged as important for future memory retrieval .
+CONCLUSIONS	That priming decreased with REM time and was higher only for REM sleep awakenings is consistent with two explanatory REM sleep processes : REM sleep consolidation serving emotional downregulation and REM sleep inertia .

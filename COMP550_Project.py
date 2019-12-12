@@ -54,8 +54,11 @@ def get_arguments():
                         help='Percentage of words to mask in the input text file.')
 
     # flags
-
+    parser.add_argument('-w', action='store_true', default=False,
+                        help='Use fine tuned weights for prediction. '
+                        'If False, model will use pretrained weights.')
     return parser.parse_args()
+
 
 def read(filename):
     '''Returns a string read from a text file.
@@ -70,10 +73,21 @@ def read(filename):
 
 def main():
     args = get_arguments()
+    pretrained = False
+
+    print('=' * 80)
+    print('File: {}'.format(args.text_file))
+    print('Masking {:.2%} of the words'.format(args.percent_words))
+    if not args.w:
+        print('Using pretrained weights')
+        pretrained = True
+    else:
+        print('Using fine-tuned model')
+    print('-' * 80)
 
     txt = read(args.text_file)
     tokenized_text, masked, ids = masking.mask(txt, args.percent_words)
-    masking.predict(tokenized_text, masked)
+    masking.predict(tokenized_text, masked, pretrained=pretrained)
 
 
 if __name__ == '__main__':

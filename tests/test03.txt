@@ -1,0 +1,14 @@
+OBJECTIVE	Octylcyanoacrylate ( Dermabond ) is a tissue `` glue '' useful in closing surgical skin incisions .
+OBJECTIVE	We compared skin octylcyanoacrylate with subcuticular skin sutures to close laparoscopic trocar sites .
+METHODS	A randomized double-armed study was performed with @ patients in whom @ trocar sites were closed .
+METHODS	Twenty-nine patients underwent subcuticular closure with @-@ absorbable suture , and thirty patients received closure with octylcyanoacrylate in accordance with the recommendations of the manufacturer ( Ethicon ; Somerville , NJ ) .
+METHODS	The number of sutures or vials of octylcyanoacrylate used , closure times , and postoperative wound problems were recorded .
+METHODS	Wounds were assessed @ weeks postoperatively for healing complications .
+METHODS	Closure costs were estimated using published operating room time per hour plus the cost of octylcyanoacrylate or suture .
+METHODS	Student 's paired t-test was used for statistical analysis .
+RESULTS	The overall mean time required for skin closure using octylcyanoacrylate and suture was @ minutes and @ minutes , respectively ( P < @ ) .
+RESULTS	An average of @ packets of suture were used to close all port sites in a particular patient , while closure with octylcyanoacrylate required an average of @ vials per patient .
+RESULTS	Wound complications consisted of subcuticular seroma with skin separation and were equally common in the two groups .
+RESULTS	The overall average cost per closure using octylcyanoacrylate was $ @ US dollars , while the cost for closure using suture was $ @ US dollars ( P < @ ) .
+CONCLUSIONS	Laparoscopic port-site skin closure with octylcyanoacrylate is rapid and effective .
+CONCLUSIONS	The method yields cost savings and a decrease in operative time of more than @ minutes per case .

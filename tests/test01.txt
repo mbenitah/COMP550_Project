@@ -1,0 +1,9 @@
+BACKGROUND	Adrenergic activation is thought to be an important determinant of outcome in subjects with chronic heart failure ( CHF ) , but baseline or serial changes in adrenergic activity have not been previously investigated in a large patient sample treated with a powerful antiadrenergic agent .
+RESULTS	Systemic venous norepinephrine was measured at baseline , @ months , and @ months in the beta-Blocker Evaluation of Survival Trial ( BEST ) , which compared placebo treatment with the beta-blocker/sympatholytic agent bucindolol .
+RESULTS	Baseline norepinephrine level was associated with a progressive increase in rates of death or death plus CHF hospitalization that was independent of treatment group .
+RESULTS	On multivariate analysis , baseline norepinephrine was also a highly significant ( P < @ ) independent predictor of death .
+RESULTS	In contrast , the relation of the change in norepinephrine at @ months to subsequent clinical outcomes was complex and treatment group-dependent .
+RESULTS	In the placebo-treated group but not in the bucindolol-treated group , marked norepinephrine increase at @ months was associated with increased subsequent risks of death or death plus CHF hospitalization .
+RESULTS	In the bucindolol-treated group but not in the placebo-treated group , the @st quartile of marked norepinephrine reduction was associated with an increased mortality risk .
+RESULTS	A likelihood-based method indicated that @ % of the bucindolol group but only @ % of the placebo group were at an increased risk for death related to marked reduction in norepinephrine at @ months .
+CONCLUSIONS	In BEST , a subset of patients treated with bucindolol had an increased risk of death as the result of sympatholysis , which compromised the efficacy of this third-generation beta-blocker .

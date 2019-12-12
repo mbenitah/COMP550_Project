@@ -5,11 +5,22 @@ import numpy as np
 import os
 
 CONFIG_FILE = 'config.json'
+MODEL_FILE = 'pytorch_model.bin'
 SAVE_DIRECTORY = './output/'
 
 # OPTIONAL: if you want to have more information on what's happening under the hood, activate the logger as follows
 import logging
 logging.basicConfig(level=logging.INFO)
+
+def set_weights(pretrained=True):
+    if not pretrained:
+        try:
+            f = open(os.path.join(SAVE_DIRECTORY, MODEL_FILE), "r")
+            f.close()
+            return SAVE_DIRECTORY
+        except FileNotFoundError:
+            print('Could not find fine tuned model. Using pretrained weights intead.')
+    return 'bert-base-uncased'
 
 
 def mask(text, percentage):
@@ -56,7 +67,7 @@ def mask(text, percentage):
     return tokenized_text, masked, ids
 
 
-def predict(tokenized_text, masked=None):
+def predict(tokenized_text, masked=None, pretrained=True):
     '''Predicts masked words in a tokenized text.
     Input:
     tokenized_text:     list of tokens of the original text
@@ -65,7 +76,8 @@ def predict(tokenized_text, masked=None):
                         with [MASK] (for calculating accuracy)
     '''
 
-    tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+    weights = set_weights(pretrained)
+    tokenizer = BertTokenizer.from_pretrained(weights)
     ids = tokenizer.convert_tokens_to_ids(tokenized_text)
 
     # Convert inputs to PyTorch tensors
@@ -73,7 +85,7 @@ def predict(tokenized_text, masked=None):
     # segments_tensors = torch.tensor([segments_ids])
 
     # Load pre-trained model (weights)
-    model = BertForMaskedLM.from_pretrained('bert-base-uncased')
+    model = BertForMaskedLM.from_pretrained(weights)
     # model.config_class(os.path.join(SAVE_DIRECTORY, CONFIG_FILE))
     # model.config_class(max_position_embeddings=1024)
     model.eval()
